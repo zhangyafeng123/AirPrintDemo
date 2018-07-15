@@ -1,0 +1,100 @@
+/* Reset */
+* {margin:0; padding:0;}
+body {font:12px/1.35 microsoft yahei; text-align:center; color:#fff;}
+:focus {outline:0;}
+input {font-size:17px; color:#fff; cursor:pointer; padding:0 10px; font-family:微软雅黑,黑体; border:none; background:none;}
+input.active {color:#000;}
+
+/* List */
+ul,ol {list-style:none;}
+
+/* Clear */
+.clear {clear:both;}
+
+/* Layout */
+.outerwarpper {margin:0 auto; position:relative; width:2048px; height:1536px; background:url('img/bg.png') no-repeat scroll center center; background-size:100% 100%;}
+.wrapper {float:left; margin:265px 0 0 376px;}
+
+/* Main Left Box */
+.main {float:left;}
+.main .outbox {clear:both; float:left;}
+.main .left-box {width:624px; float:left;}
+.main .left-box .title {color:#ffffff; text-align:left; font-size:28px; font-family:'宋体'; font-weight:bold; margin:0 0 40px;}
+.main .left-box .title span {color:#ffffff; font-family:times new roman; font-weight:normal;}
+.main .left-box .options {width:624px;}
+.main .left-box .options .item {margin:0 0 25px; width:530px; float:left;}
+.main .left-box .options .item-p5 {width:253px;}
+-*
+.ma-----------------------------------------------------------------------------------u-
+in .left-box .options .item.left {margin-right:15px;}
+.main .left-box .options .item.right {margin-left:15px;}
+.main .left-box .options .item .tit {color:#ffffff; font-weight:bold; font-size:30px; text-align:left; margin:0 0 10px;}
+.main .left-box .options .item .dtit {display:none;}
+.main .left-box .options .item .active {display:block;}
+.main .left-box .options .item .box {width:530px; height:73px; background:#ffffff; position:relative; border-radius:5px; border:2px solid #c3b292;}
+.main .left-box .options .item .box-p5 {width:253px; height:73px; background:#ffffff; position:relative; border-radius:5px; border:2px solid #c0ad8a;}
+.main .left-box .options .item .box-p5 input {width:183px; height:73px; color:#DFB166; font-size:30px; float:left;}
+.main .left-box .options .item .box input {width:410px; height:73px; color:#DFB166; font-size:24px; float:left;}
+.main .left-box .options .item .tag {color:#DFB166; font-size:28px; position:absolute; right:20px; top:20px;}
+.main .left-box .options .item .box .boxcon {width:500px; height:73px; padding:0 15px; color:#595656; font-size:26px; line-height:73px; font-weight:bold; text-align:left;}
+.main .left-box .options .item .innerbox {float:left;}
+.main .left-box .options .item .innerbox-p8 {width:372px; margin-right:19px;}
+.main .left-box .options .item .innerbox-p2 {width:120px; margin-left:19px;}
+.main .left-box .options .item .box-p8 {height:73px; background:#ffffff; position:relative; border-radius:5px; border:2px solid #DFB166;}
+.main .left-box .options .item .box-p2 {height:73px; background:#ffffff; position:relative; border-radius:5px; border:2px solid #DFB166;}
+
+.main .left-box .dlist {position:absolute; right:0; top:73px; z-index:999; background:#fff; border:1px solid #DFB166; width:245px; padding:0 0 20px; border-radius:0 0 10px 10px; box-shadow:0 4px 10px #DFB166; border-bottom-width:2px; display:none;}
+.main .left-box .dlist .btn {text-align:left; color:#DFB166; font-size:30px; width:245px; height:52px; line-height:52px; cursor:pointer; text-indent:35px;}
+.main .left-box .dlist .btn.active {background:url('img/slc-item.jpg') repeat-x scroll 0 0; border-left:5px solid #DFB166; width:240px;}
+.main .left-box .dlist .listtop {height:11px; width:245px; background:#DFB166;}
+.main .left-box .dlist .listbottom {height:25px; width:260px; background:url('img/list_item_bottom.png') no-repeat scroll 0 0;}
+.main .left-box .slc {width:40px; height:40px; background:url('img/slc.jpg') no-repeat scroll center center; position:absolute; right:20px; top:20px; cursor:pointer; z-index:3;}
+
+.main .left-box .dlist-m {width:360px;}
+.main .left-box .dlist-m .btn {width:360px;}
+.main .left-box .dlist-m .btn.active {width:355px;}
+.main .left-box .dlist-m .listtop {width:360px;}
+.main .left-box .dlist-w {width:525px;}
+.main .left-box .dlist-w .btn {width:525px;}
+.main .left-box .dlist-w .btn.active {width:520px;}
+.main .left-box .dlist-w .listtop {width:525px;}
+
+
+
+/* Main Right Box */
+.main .right-box {float:left; width:555px; margin:40px 0 0 150px;}
+.main .right-box .item {width:555px; float:left;}
+.main .right-box .item .tit {padding:15px 35px; color:#DFB166; font-size:25px; text-align:left; border-top:1px solid #fdfdfd; border-right:1px solid #cccbcb; border-bottom:1px solid #cccbcb; background:url('img/slc_r.jpg') no-repeat scroll 10px center #f8f4f0; font-weight:bold; margin:0 0 10px;}
+.main .right-box .item .label {float:left; font-size:25px; font-weight:bold; height:75px; line-height:95px; width:130px; text-align:left; text-indent:20px;}
+.main .right-box .item input {height:75px; width:300px; float:left; line-height:95px;}
+.main .right-box .item .unit {float:left; height:75px; line-height:95px; color:#cacacb; font-size:28px;}
+.main .right-box .sum {margin:0 0 40px;}
+.main .right-box .sum .label {color:#ffb400; font-size:30px;}
+.main .right-box .sum input {color:#ffffff; font-size:60px; font-weight:bold; text-align:left; line-height:95px; padding:8px 10px 0;}
+
+.fkfs {width:555px; float:left; margin:0 0 50px;}
+.fkfs .item {border-bottom:1px solid #c3c3c3;}
+.fkfs .label {color:#ffffff;}
+.fkfs .input {height:75px; width:300px; padding:0 10px; float:left; text-align:left; font-size:30px; line-height:95px; color:#ffffff;}
+.dklv {height:73px; width:290px; line-height:73px; padding:0 10px; color:#abadb3; font-size:30px;}
+.dkqx {color:#595656; float:left; font-size:24px; height:73px; line-height:73px; width:410px; padding:0 10px; font-size:30px; text-align:left;}
+.zhg {display:none;}
+.lv input {width:100px; height:73px; line-height:73px; color:#abadb3; font-size:30px;}
+
+
+/* Button Group */
+.btnList {position:absolute; left:0; top:63px; width:448px; height:336px; background:url('img/btgroup.png') no-repeat scroll center center; z-index:999;}
+.btnList .btnwrapper {width:432px; height:280px; margin:28px 0 28px 9px; float:left;}
+.btnList .btn {width:68px; height:68px; cursor:pointer; float:left; color:#fff; margin:14px 10px 9px 23px;}
+.btnList .cl {height:70px; width:75px; z-index:999; cursor:pointer; float:left; margin:225px 0 0;}
+
+.btn-group {clear:both; width:377px; height:65px; margin:0 auto;}
+.btn-group .btn {height:65px; float:left; cursor:pointer;}
+.btn-group .reset {width:151px; background:url('img/reset.png') no-repeat scroll center center;}
+.btn-group .output {width:226px; background:url('img/cal.png') no-repeat scroll center center;}
+
+.bk {position:absolute; width:110px; height:110px; bottom:20px; right:15px; background:url('img/bk111.png') no-repeat scroll center center; cursor:pointer;}
+
+
+
+

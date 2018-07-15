@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>计算器</title>
+	<meta content="text/html; charset=gb2312" http-equiv="Content-Type" />
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=0.5,user-scalable=no" />	
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="style-ie7.css" />
+	<![endif]-->
+	<script type="text/javascript" src="jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="cal.js"></script>
+</head>
+<body ontouchstart="javascript:listUp();">
+	<div class="outerwarpper">
+	
+		<div class="wrapper">
+			<div class="container">
+				
+				<!-- BEGIN MAIN -->
+				<div class="main">
+				
+					<div class="outbox">
+					
+						<!-- BEGIN LEFT BOX -->
+						<div class="left-box">
+							<div class="title"><span>VIP. </span>请您填写</div>
+							<form action="" id="cal" autocomplete="off">
+								<div class="options">
+								
+									<div class="item">
+										<div class="tit">贷款类别:</div>
+										<div class="box">
+											<div class="boxcon" id="dktype">商业贷款</div>
+											<div class="slc" ontouchstart="javascript:showList(event,this);"></div>
+											<div class="dlist dlist-w">
+												<div class="listtop"></div>
+												<div class="btn active" id="sy" ontouchstart="javascript:LoanType('sy')">商业贷款</div>
+												<div class="btn" id="gjj" ontouchstart="javascript:LoanType('gjj')">公积金贷款</div>
+												<div class="btn" id="zh" ontouchstart="javascript:LoanType('zh')">组合贷款</div>
+											</div>
+										</div>
+									</div>
+								
+									<div class="item item-p5 left">
+										<div class="tit">单价:</div>
+										<div class="box-p5">
+											<input id="dj" type="tel" name="dj" value="" ontouchstart="javascript:InputEvent(event,this);" />
+											<div class="tag">元</div>
+										</div>
+									</div>
+									<div class="item item-p5 right">
+										<div class="tit">面积:</div>
+										<div class="box-p5">
+											<input id="mj" type="tel" name="mj" value="" ontouchstart="javascript:InputEvent(event,this);" />
+											<div class="tag">㎡</div>
+										</div>
+									</div>	
+									<div class="item item-p5 left">
+										<div class="tit">折扣:</div>
+										<div class="box-p5">
+											<input id="zk" type="tel" name="zk" value="" ontouchstart="javascript:InputEvent(event,this);" />
+											<div class="tag">折</div>
+										</div>
+									</div>
+									<div class="item item-p5 right">
+										<div class="tit">折后优惠:</div>
+										<div class="box-p5">
+											<input id="zhyh" type="tel" name="zhyh" value="" ontouchstart="javascript:InputEvent(event,this);" />
+											<div class="tag">元</div>
+										</div>
+									</div>
+									
+									<div class="item">
+										<div class="tit">贷款期限:</div>
+										<div class="box">
+											<div class="dkqx" id="dkqx"></div>
+											<div class="slc" ontouchstart="javascript:showList(event,this)"></div>
+											<div class="dlist dlist-w" id="dkqxlist">
+												<div class="listtop"></div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.00,0)">1</div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.15,0)">2</div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.15,0)">3</div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.40,0)">4</div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.40,0)">5</div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.55,0)">10</div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.55,0)">15</div>
+												<div class="btn" ontouchend="javascipt:nxListLi(1,this,6.55,0)">20</div>
+                                                <div class="btn" ontouchend="javascipt:nxListLi(1,this,6.55,0)">25</div>
+                                                <div class="btn" ontouchend="javascipt:nxListLi(1,this,6.55,0)">30</div>
+											</div>																			
+										</div>
+									</div>
+									
+									<div class="item nzh">
+										<div class="tit dtit sy active">商业贷款金额:</div>										
+										<div class="tit dtit gjj">公积金贷款金额:</div>										
+										<div class="box">
+											<input id="dkje" type="tel" name="dkje" value="" ontouchstart="javascript:InputEvent(event,this);" />
+											<div class="tag">万</div>
+										</div>
+									</div>									
+									
+									<div class="item item-p5 left zhg">
+										<div class="tit dtit zh">商业贷款金额:</div>										
+										<div class="box-p5">
+											<input id="zsdkje" type="tel" name="zsdkje" value="" ontouchstart="javascript:InputEvent(event,this);" />
+											<div class="tag">万</div>
+										</div>
+									</div>
+									
+									<div class="item item-p5 right zhg">
+										<div class="tit dtit zh">公积金贷款金额:</div>										
+										<div class="box-p5">
+											<input id="zgdkje" type="tel" name="zgdkje" value="" ontouchstart="javascript:InputEvent(event,this);" />
+											<div class="tag">万</div>
+										</div>
+									</div>									
+
+									<div class="item nzh">
+									
+										<div class="tit dtit sy active">商业贷款利率:</div>
+										<div class="tit dtit gjj">公积金贷款利率:</div>
+										<div class="innerbox innerbox-p8">
+											<div class="box-p8">
+												<div id="dklv" class="dklv">基准利率</div>
+												<div class="slc" ontouchstart="javascript:showList(event,this)"></div>
+												<div id="lvList" class="dlist dlist-m">
+													<div class="listtop"></div>
+													<div class="btn cur" ontouchend="javascript:lvListLi(this)">基准利率</div>
+													<div class="btn" ontouchend="javascript:lvListLi(this)">上浮利率</div>
+												</div>							
+											</div>	
+										</div>
+										
+										<div class="innerbox innerbox-p2">
+											<div id="lv" class="lv box-p2">
+												<input type="tel" name="lv" value="" ontouchstart="javascript:InputEvent(event,this)" />
+											</div>
+										</div>
+										
+									</div>
+									
+									<div class="item zhg">
+									
+										<div class="tit dtit zh">商业贷款利率:</div>
+										<div class="innerbox innerbox-p8">
+											<div class="box-p8">
+												<div id="sdklv" class="dklv">基准利率</div>
+												<div class="slc" ontouchstart="javascript:showList(event,this)"></div>
+												<div id="slvList" class="dlist dlist-m">
+													<div class="listtop"></div>
+													<div class="btn cur" ontouchend="javascript:lvListLi(this)">基准利率</div>
+													<div class="btn" ontouchend="javascript:lvListLi(this)">上浮利率</div>
+												</div>							
+											</div>	
+										</div>
+										
+										<div class="innerbox innerbox-p2">
+											<div id="slv" class="lv zlv box-p2">
+												<input type="tel" name="lv" value="" ontouchstart="javascript:InputEvent(event,this)" />
+											</div>
+										</div>
+										
+									</div>
+									
+									<div class="item zhg">
+									
+										<div class="tit dtit zh">公积金贷款利率:</div>
+										<div class="innerbox innerbox-p8">
+											<div class="box-p8">
+												<div id="gdklv" class="dklv">基准利率</div>
+												<div class="slc" ontouchstart="javascript:showList(event,this)"></div>
+												<div id="glvList" class="dlist dlist-m">
+													<div class="listtop"></div>
+													<div class="btn cur" ontouchend="javascript:lvListLi(this)">基准利率</div>
+													<div class="btn" ontouchend="javascript:lvListLi(this)">上浮利率</div>
+												</div>							
+											</div>	
+										</div>
+										
+										<div class="innerbox innerbox-p2">
+											<div id="glv" class="lv zlv box-p2">
+												<input type="tel" name="glv" value="" ontouchstart="javascript:InputEvent(event,this)" />
+											</div>
+										</div>
+										
+									</div>									
+									
+								</div>
+							</form>
+							
+						</div>
+						<!-- END LEFT BOX -->
+						
+						<!-- BEGIN RIGHT BOX -->
+						<div class="right-box">
+							
+							<form action="" autocomplete="off">
+								<div class="item sum">
+									<div class="label">总&nbsp;&nbsp;价:</div>
+									<input id="sum" type="text" name="sum" disabled="disabled" />
+									<div class="unit">万</div>
+								</div>
+							</form>
+
+							<div id="debx" class="item debx">
+								<div class="tit">每月等额还款</div>
+								<div class="dxwrapper fkfs">
+									<form action="" id="debxf" autocomplete="off">
+										<div class="item">
+											<div class="label">首&nbsp;&nbsp;付:</div>
+											<div id="xsfje" class="input"></div>
+											<div class="unit">万</div>										
+										</div>
+										<div class="item">
+											<div class="label">还款月数:</div>
+											<div id="xkhys" class="input"></div>
+											<div class="unit">月</div>										
+										</div>
+										<div class="item">
+											<div class="label">每月还款:</div>
+											<div id="xmyhk" class="input"></div>
+											<div class="unit">元</div>										
+										</div>										
+									</form>	
+								</div>
+							</div>
+							
+							<div id="debj" class="item debj">
+								<div class="tit">逐月递减还款</div>
+								<div class="djwrapper fkfs">				
+									<form action="" id="debjf" autocomplete="off">
+										<div class="item">
+											<div class="label">首&nbsp;&nbsp;付:</div>
+											<div id="jsfje" class="input"></div>
+											<div class="unit">万</div>										
+										</div>
+										<div class="item">
+											<div class="label">还款月数:</div>
+											<div id="jhkys" class="input"></div>
+											<div class="unit">月</div>										
+										</div>	
+										<div class="item">
+											<div class="label">每月还款:</div>
+											<div id="jmyhk" class="input"></div>
+											<div class="unit">元</div>										
+										</div>	
+										<div class="item">
+											<div class="label">每月递减:</div>
+											<div id="jmydj" class="input"></div>
+											<div class="unit">元</div>										
+										</div>																						
+									</form>
+								</div>
+							</div>
+								
+							<!-- BEGIN BUTTON GROUP -->
+							<div class="btn-group">
+								<div class="btn reset" ontouchstart="javascript:reset();"></div>
+								<div class="btn output" ontouchstart="javascript:cal();"></div>
+							</div>
+							<!-- END BUTTON GROUP -->				
+								
+						</div>
+						<!-- END RIGHT BOX -->
+						
+					
+					</div>
+				</div>
+				<!-- END MAIN -->
+			</div>
+					
+		</div>
+		
+		<div class="bk"></div>
+		
+	</div>	
+</body>
+</html>

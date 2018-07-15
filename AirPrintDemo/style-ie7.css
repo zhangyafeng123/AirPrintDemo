@@ -1,0 +1,11 @@
+﻿.right-box .con,
+#cal p {line-height:30px;}
+.right-box .conBox {float:none; clear:both;}
+.right-box .conBox .con {float:none;}
+#repayment .con {float:left;}
+.ie7_fix {z-index:9;}
+
+.lv input {width:41px; padding:0 5px;}
+
+.dxwrapper {left:25px;}
+.djwrapper {left:25px;}
